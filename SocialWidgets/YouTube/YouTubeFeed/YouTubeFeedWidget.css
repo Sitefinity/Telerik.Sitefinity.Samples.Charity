@@ -1,0 +1,92 @@
+﻿.youtubefeed
+{
+	background: #fff;
+	border: 3px solid #0C5C8A;
+	font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif !important;
+	color: #000;
+}
+
+.youtubeheader, .youtubefooter
+{
+	background: #0C5C8A;
+	color: #fff;
+	padding: 5px 0 5px 10px;
+}
+
+.youtubefooter
+{
+	text-align: center;
+}
+
+.youtubeheader a
+{
+	color:#fff;
+	font-weight: bold;
+	font-size: 1.1em;
+	text-decoration: none;
+}
+
+.youtubefooter a
+{
+	color:#fff;
+	font-weight: normal;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+.youtubefooter a img
+{
+	margin: 5px 5px 0 0;
+	vertical-align: bottom;
+	border: none;
+}
+
+.youtubefeed ul
+{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+.youtubefeed ul li
+{
+	border-bottom: dotted 1px #ddd;
+	padding: 10px 3px 1px 10px;
+	line-height: normal;
+	font-size: 0.85em;
+}
+
+.youtubefeed li img
+{
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+.youtubefeed .reply
+{
+	color: #666;
+}
+
+.youtubefeed p
+{
+	margin: 1px 0 9px 0;
+}
+
+.youtubefeed ul li a
+{
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.youtubefeed ul li a:hover
+{
+	text-decoration: underline;
+	color: #0A4672;
+}
+
+.youtubefeed .timestamp
+{
+	margin-bottom: 0px;
+	font-size: .9em;
+	text-align: right;
+}

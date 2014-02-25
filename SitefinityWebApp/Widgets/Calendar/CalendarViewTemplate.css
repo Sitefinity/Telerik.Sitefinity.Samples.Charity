@@ -1,0 +1,18 @@
+﻿.EventCalendar
+{
+	margin-bottom: 15px;
+}
+
+.EventCalendar .rcRow td 
+{
+	vertical-align: top !important;
+	width: 14% !important;
+	min-height: 50px !important;
+}
+
+.EventCalendar td ul
+{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}

@@ -1,0 +1,727 @@
+﻿/* -------------------------------------------------------------------- */
+/* HTML styles */
+
+.sf_cols:after
+{
+content: "" !important;
+}
+
+
+body 
+{
+	background-color: #262626;
+	margin: 0px;
+	top: 0px;
+	font-size: 14px;
+	font-family: Arial;
+	color: Black;
+}
+
+fieldset
+{
+	border: none;
+}
+
+a 
+{
+	color: #1a6692;
+}
+
+blockquote
+{
+	position: relative;
+	font-family: Times New Roman;
+	font-size: 18px;
+	line-height: 30px;
+	color: #666;
+	text-align: center;
+	padding-bottom: 20px;
+	background-image: url(../Images/quote_bg.jpg);
+	background-repeat: no-repeat;
+	text-shadow: 1px 1px 0px #fff;
+}
+
+address 
+{
+	font-style: normal;
+}
+
+/* -------------------------------------------------------------------- */
+/* Primary styles */
+
+#wrapper 
+{
+	position:relative;
+	margin: 20px auto;
+	width: 900px;
+}
+
+.main 
+{
+	background: #efefef;
+	color: #444;
+	line-height: 1.5em;
+}
+
+.content
+{
+	background-image: url(../Images/vertical_separator.jpg);
+	background-position: right;
+	background-repeat: repeat-y;
+}
+.content .sf_colsIn 
+{
+	margin-right: 15px;
+}
+
+.content h1, .sidebar h2
+{
+	background-color: #0c5c8a;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: White;
+	text-shadow: 1px 1px 0px #000;
+	margin: 0 0 1em 0;
+	padding: 0.30em;
+}
+
+/* -------------------------------------------------------------------- */
+/* Header styles */
+
+.header
+{
+	background-color:#005586;
+}
+
+.header .logo 
+{
+	position: relative;
+	width: 360px;
+	height: 119px;
+	display: block;
+	background-image: url('../Images/logo.jpg');
+	background-repeat: no-repeat;
+}
+
+
+.header .logo h1
+{
+	position: absolute;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-style: italic;
+	text-shadow: 1px 1px 0 #000;
+	font-size: 2em;
+	color: White;
+	top: 15px;
+	left: 82px;
+}
+
+.header .logo h2 
+{
+	font-size: 1em;
+	font-weight: bold;
+	position: absolute;
+	top: 56px;
+	left: 120px;
+
+}
+
+.header a:hover 
+{
+	background-position: 0 -119px;
+}
+
+.header .search
+{
+	position: relative;
+}
+
+/* -------------------------------------------------------------------- */
+/* Navigation Menu styles */
+
+.RadMenu_menu
+{
+	position: relative;
+	float: left;
+	width: 100%;
+	line-height: 40px;
+	border-top: 1px solid #004c77;
+	border-bottom: 1px solid #3b7da2;
+	background-color: #1a6692;
+}
+
+.RadMenu_menu a.rmLink
+{
+	color: White;
+	display: block;
+	text-align: center;
+	border-bottom: 2px solid #1a6692;
+	text-decoration: none;
+	cursor: pointer !important;
+	padding: 0 7px 0 19px;
+}
+
+.RadMenu_menu a:hover,
+.RadMenu_menu a.rmSelected,
+.RadMenu_menu a.rmExpanded 
+{
+	display: block;
+	background-color: #31769d;
+	border-bottom: 2px solid #8bb2c8;
+}
+
+.RadMenu_menu .rmGroup 
+{
+	background-color: #1a6692;
+	border-top: 1px solid #3b7da2;
+}
+
+.RadMenu_menu .rmGroup a 
+{
+	border-left: 2px solid #1a6692;
+}
+
+.RadMenu_menu .rmGroup a:hover,
+.RadMenu_menu .rmGroup .rmSelected
+{
+	border-bottom: none;
+	border-left: 2px solid #8bb2c8;
+}
+
+/* -------------------------------------------------------------------- */
+/* Banner styles */
+
+.banner
+{
+	height: 280px;
+}
+
+.banner-left 
+{
+	height: 280px;
+	overflow: hidden;
+}
+
+.banner-right {
+	height: 280px;
+	overflow: hidden;
+	background-image: url(../Images/header_right.jpg);
+	color: #ccc;
+	line-height: 22px;
+}
+
+.banner-right h3 
+{
+	font-size: 22px;
+	color: White;
+	font-weight: normal;
+	margin-bottom: 10px;
+	font-family: Times New Roman;
+	border-bottom: 1px solid #707070;
+	padding-bottom: 10px;
+}
+
+.banner-right a 
+{
+	display: block;
+	position: relative;
+	float:left;
+	padding-left: 40px;
+	height: 33px;
+	line-height: 33px;
+	padding-right: 10px;
+	background-image: url(../Images/donate.png);
+	color: White;
+	font-weight: bold;
+	text-shadow: 1px 1px 0px #000;
+	text-decoration: none;
+	border-right: 1px solid #13405b;
+}
+
+.banner-right a:hover
+{
+	background-position: 0 -33px;
+}
+
+/* -------------------------------------------------------------------- */
+/* Homepage styles */
+
+.body h2,
+.homepage h2
+{
+	background-color: #0c9cca;
+	font-size: 16px;
+	font-weight: bold;
+	color: White;
+	text-shadow: 1px 1px 0px #000;
+	width: 98%;
+	margin-top: 0px;
+	padding-left: 2%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.three_col_split h2
+{
+	background-color: #0c5c8a;
+}
+
+.homepage .sfnewsListItem
+{
+	margin-right: 50px;
+	background: url('../images/news.png') left 8px no-repeat;
+	padding: 8px 0 8px 45px;
+	
+}
+
+.homepage .sfeventListItem
+{
+	margin-right: 50px;
+	background: url('../images/calendar.png') left 8px no-repeat;
+	padding: 8px 0 8px 45px;
+	border-bottom: 1px dashed #ccc;
+}
+
+/* -------------------------------------------------------------------- */
+/* News styles */
+
+.sfnewsList
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.sfnewsList h3.sfnewsTitle
+{
+	margin-bottom: 3px;
+}
+
+.sfnewsList h3.sfnewsTitle a
+{
+	color: #444444;
+	text-decoration: none;
+}
+
+.sfnewsList .sfnewsMetaInfo
+{
+	margin: 0px;
+}
+
+.sfnewsSummary
+{
+	margin: 10px 0px;
+}
+
+.sfnewsListItem
+{
+	padding-bottom: 10px;
+	margin-right: 20px;
+	border-bottom: 1px dashed #ccc;
+}
+
+.sfnewsDetails .sfcommentsForm
+{
+	padding: 0;
+	margin: 0;
+}
+
+.sfnewsDetails .sfcommentsForm ol.sfcommentsFieldsList
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.sfnewsDetails .sfcommentsForm ol.sfcommentsFieldsList li 
+{
+	margin: 5px 0 5px 0;
+}
+
+.sfnewsDetails .sfnewsContent 
+{
+	padding-bottom: 20px;
+	border-bottom: 1px dashed #ccc;
+}
+
+.sfnewsDetails .sfcommentsForm ol.sfcommentsFieldsList input 
+{
+	width: 300px;
+}
+
+.three_col_split h2
+{
+	background-color: #0c5c8a;
+	font-size: 22px;
+	text-indent: 15px;
+	font-weight: bold;
+	color: White;
+	text-shadow: 1px 1px 0px #000;
+	width: 255px;
+	margin-top: 0px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.three_col_split p
+{
+	width: 250px;
+}
+
+.three_col_split .sf_colsOut img
+{
+	width: 255px;
+	height: 180px;
+}
+
+.iCalFeed
+{
+	clear: both;
+	text-align: right;
+}
+
+.iCalFeed a
+{
+	background: url('/images/ical.png') right center no-repeat;
+	padding: 8px 38px 8px 38px;
+	font-size: .9em;
+	text-decoration: none !important;
+}
+
+.outlook
+{
+	float: right;
+	text-align: right;
+	background: url('/images/alarm.png') left center no-repeat;
+	padding-left: 20px;
+	text-decoration: none;
+}
+
+
+/* -------------------------------------------------------------------- */
+/* Widget icon styles */
+
+.RadDock_Sitefinity .rdTable .rdTitleBar .sfTwitterFeedWidget
+{
+	background: url('../images/Widgets.png') 3px -38px no-repeat;
+}
+
+.RadDock_Sitefinity .rdTable .rdTitleBar .sfYouTubeFeedWidget
+{
+	background: url('../images/Widgets.png') 3px -138px no-repeat;
+}
+
+.RadDock_Sitefinity .rdTable .rdTitleBar .sfFlickrFeedWidget
+{
+	background: url('../images/Widgets.png') 3px -238px no-repeat;
+}
+
+.RadDock_Sitefinity .rdTable .rdTitleBar .sfLikeBoxWidget
+{
+	background: url('../images/Widgets.png') 3px -338px no-repeat;
+}
+
+.RadDock_Sitefinity .rdTable .rdTitleBar .sfiCalFeedwidget
+{
+	background: url('../images/Widgets.png') 3px -438px no-repeat;
+}
+
+.RadDock_Sitefinity .rdTable .rdTitleBar .sfDonationWidget
+{
+	background: url('../images/Widgets.png') 3px -538px no-repeat;
+}
+
+.RadDock_Sitefinity .rdTable .rdTitleBar .sfMapWidget
+{
+	background: url('../images/Widgets.png') 3px -638px no-repeat;
+}
+
+/* -------------------------------------------------------------------- */
+/* Events styles */
+
+ul.sfeventsList 
+{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+ul.sfeventsList h3.sfeventTitle
+{
+	border-bottom: 1px dashed #ccc;
+	font-size: 1.5em;
+	padding-bottom: 0.5em;
+	margin: 0 0 0.25em 3.5em;
+}
+
+ul.sfeventsList h3.sfeventTitle a 
+{
+	color: #444444;
+	text-decoration: none;
+}
+
+.sfeventsList .sfeventDateSummary 
+{
+	color: White;
+	float: left;
+	padding: 0.3em;
+	margin: 0 1em 0 0;
+	background-color: #464646;
+	text-align: center;
+	clear: both;
+	width: 3.5em;
+}
+
+.sfeventsList .sfeventDateSummary div 
+{
+	line-height: 1.25em;
+}
+
+.sfeventsList .sfeventDateSummary .sfeventDay 
+{
+	font-size: 1.25em;
+}
+
+.sfeventListItem 
+{
+	margin-bottom: 1.5em;
+}
+
+/* -------------------------------------------------------------------- */
+/* Event Calendar styles */
+
+.EventCalendar .rcRow td
+{
+	border: 1px solid #EEEEEE !important;   
+	height: 100px !important;
+}
+
+.EventCalendar .rcTitle:hover
+{
+	background-color: #1A6692;
+	color: White;
+}
+
+.EventCalendar .rcRow td a:hover
+{
+	background-color: #ddd;
+}
+
+/* -------------------------------------------------------------------- */
+/* Event Sidebar styles */
+
+ul.sfeventsListSidebar 
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.sfeventsListSidebar  li.sfeventListItem 
+{
+	padding: 0 0 10px 0;
+	margin: 10px 0 0 0;
+	border-bottom: 1px dashed #ccc;
+}
+
+/* -------------------------------------------------------------------- */
+/* Facebook styles */
+
+.facebookLikeBox
+{
+	background-color: White;
+}
+
+/* -------------------------------------------------------------------- */
+/* Blog styles */
+
+ul.sfpostsList 
+{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+ul.sfpostsList .sfpostTitle 
+{
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+ul.sfpostsList .sfpostTitle a
+{
+	text-decoration: none;
+	color: #444444;
+}
+
+ul.sfpostsList .sfpostListItem 
+{
+	border-bottom: 1px dashed #ccc;
+}
+
+.sfpostDetails .sfcommentsForm
+{
+	padding: 0;
+	margin: 0;
+}
+
+.sfpostDetails .sfcommentsForm ol.sfcommentsFieldsList
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.sfpostDetails .sfcommentsForm ol.sfcommentsFieldsList li 
+{
+	margin: 5px 0 5px 0;
+}
+
+.sfpostDetails .sfpostContent 
+{
+	padding-bottom: 10px;
+	margin-bottom: 20x;
+	border-bottom: 1px dashed #ccc;
+}
+
+.sfpostDetails .sfcommentsForm ol.sfcommentsFieldsList input 
+{
+	width: 300px;
+}
+
+/* -------------------------------------------------------------------- */
+/* RSS styles */
+
+.rss 
+{
+	padding-bottom: 20px;
+}
+
+/* -------------------------------------------------------------------- */
+/* Form styles */
+
+.sfFormsEditor .sfFormBox
+{
+	margin: 0.5em 0 0.5em 0;
+}
+.sfFormsEditor input.sfTxt 
+{
+	width: 300px;
+}
+.sfFormsEditor .sfFormDropdown
+{
+	margin: 1em 0 1em 0;
+}
+.sfFormsEditor .sfFormDropdown .sfDropdownList 
+{
+	display: block;
+}
+.sfFormsEditor .sfFormDropdown select
+{
+	width: 185px;
+}
+.sfFormsEditor .sfTxtLbl 
+{
+	font-weight: bold;
+}
+.sfFormsEditor textarea.sfTxt 
+{
+	width: 400px;
+	margin-bottom: 1em;
+}
+
+.sfSuccess
+{
+	padding-top: 1em;
+	font-size: 1.5em;   
+	border-top: 1px dashed #ccc;   
+}
+
+/* -------------------------------------------------------------------- */
+/* Search styles */
+
+.header .search .sfsearchBox
+{
+	position: absolute;
+	top: 40px;
+	left: 190px;
+	width: 195px;
+	background-color: #1A6692;
+	padding: 10px;
+}
+
+.sfsearchResultsWrp .sfsearchResultTitle
+{
+	font-weight: bold;
+}
+
+.sfsearchResultsWrp .sfsearchResultUrl
+{
+	padding: 0;
+	margin: 0;
+}
+
+.sfsearchSubmit
+{
+	background: url('/images/search.png');
+	border: none;
+	text-indent: -999px;
+	overflow: hidden;
+	vertical-align: middle;
+	width: 32px;
+	height: 32px;
+	padding: 0px;
+}
+
+/* -------------------------------------------------------------------- */
+/* Footer styles */
+
+.footer 
+{
+	color: #777;
+	font-weight: bold;
+	margin-top: 15px;
+}
+
+.RadTabStrip_footer_menu
+{
+	position: relative;
+	float: left;
+	width: 100%;
+	line-height: 40px;
+}
+
+.RadTabStrip_footer_menu a
+{
+	color: #ccc;
+	display: block;
+}
+
+.RadTabStrip_footer_menu a:hover
+{
+	display: block;
+	color : #eee;
+}
+
+.RadTabStrip_footer_menu a.rtsLink  
+{
+	padding-left: 0px;
+	text-align: left;
+}
+.RadTabStrip_footer_menu a.rtsLink  span
+{
+	padding: 0px;
+}
+
+
+.rssfeed
+{
+	background: url('/images/rss.png') no-repeat left center;
+	text-decoration: none;
+}
+
+.floatright
+{
+	float: right;
+	margin: 0px 0px 15px 15px;
+}

@@ -1,0 +1,25 @@
+﻿.twitterfeed ul
+{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+.twitterfeed ul li
+{
+	border-bottom: dashed 1px #aaa;
+	padding: 8px 0px;
+	font-size: 1em;
+}
+
+.twitterfeed ul li a
+{
+	font-weight: bold;
+}
+
+.twitterfeed .timestamp
+{
+	margin-bottom: 0px;
+	font-size: .9em;
+	text-align: right;
+}

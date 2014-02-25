@@ -1,0 +1,7 @@
+﻿/* These styles are used for styling RadEditor and are only applied when RadEditor is used on the page */
+/* This style is referenced in Sitefinity's configuration in the Appearance area */
+
+body 
+{
+    background-color: White !important;
+}
