@@ -1,7 +1,17 @@
 Telerik.Sitefinity.Samples.Charity
 ==================================
 
-The Charity Starter Kit (Telerik Charity) can be used to quickly create an interactive and engaging non-profit website. Originally inspired by the Microsoft GiveCamp charity events, the Charity Starter Kit contains a suite of useful custom widgets and helps educate developers about Sitefinity.
+The Charity starter kit (Telerik Charity) can be used to quickly create an interactive and engaging non-profit website. Originally inspired by the Microsoft GiveCamp charity events, the Charity starter kit contains a suite of useful custom widgets and helps educate developers about Sitefinity.
+
+Using the Charity starter kit, you can create:
+
+* Social media widgets - including Facebook, Twitter, and Flickr 
+* Donation widget with PayPal integration 
+* Maps widget - with Bing Maps integration 
+* iCal reminder and feeds for events 
+* Custom templates and themes 
+* Sample contact form 
+* Volunteer and job opportunity pages 
 
 
 
