@@ -28,20 +28,54 @@ Using the Charity starter kit, you can create:
 
 ### Installation instructions: SDK Samples from GitHub
 
-1. Clone the [Telerik.Sitefinity.Samples.Dependencies](https://github.com/Sitefinty-SDK/Telerik.Sitefinity.Samples.Dependencies) repo to get all assemblies necessary to run for the samples.
-2. Fix broken references in the class libraries, for example in **SitefinityWebApp** and **Telerik.Sitefinity.Samples.Common**:
 
-  1. In Solution Explorer, open the context menu of your project node and click _Properties_.  
-  
-    The Project designer is displayed.
-  2. Select the _Reference Paths_ tab page.
-  3. Browse and select the folder where **Telerik.Sitefinity.Samples.Dependencies** folder is located.
-  4. Click the _Add Folder_ button.
+1. In Solution Explorer, navigate to _SitefinityWebApp_ -> *App_Data* -> _Sitefinity_ -> _Configuration_ and select the **DataConfig.config** file. 
+2. Modify the **connectionString** value to match your server address.
+3. Build the solution.
+
+The project refers to the following NuGet packages:
+
+**Sitefinity.Widgets.Calendar** library
+
+*	DDay.iCal.nupkg – from nugget official package store
+
+* 	Telerik.Sitefinity.Core.nupkg
+
+*	Telerik.Sitefinity.Content.nupkg
+
+*	OpenAccess.Core.nupkg
+
+**Sitefinity.Widgets.Maps** library
+
+* Telerik.Sitefinity.Core.nupkg
+
+**Sitefinity.Widgets.Social** library
+
+*	Telerik.Sitefinity.Core.nupkg
+
+**SitefinityWebApp** library
+
+*	Telerik.Sitefinity.All.nupkg
+
+*	DDay.iCal.nupkg – from nugget official package store
+
+**Telerik.Sitefinity.Samples.Common** library
+
+*	Telerik.Sitefinity.Core.nupkg
+
+*	Telerik.Sitefinity.Content.nupkg
+
+*	OpenAccess.Core.nupkg
+
+**TemplateImporter** library
+
+*	Telerik.Sitefinity.Core.nupkg
+
+*	Telerik.Web.UI.nupkg
+
+*	OpenAccess.Core.nupkg
 
 
-3. In Solution Explorer, navigate to _SitefinityWebApp_ -> *App_Data* -> _Sitefinity_ -> _Configuration_ and select the **DataConfig.config** file. 
-4. Modify the **connectionString** value to match your server address.
-5. Build the solution.
 
 ### Login
 
