@@ -75,7 +75,7 @@ The project refers to the following NuGet packages:
 
 *	OpenAccess.Core.nupkg
 
-
+You can find the packages in the official [Sitefinity Nuget Server](http://nuget.sitefinity.com).
 
 ### Login
 
