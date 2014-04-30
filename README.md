@@ -17,7 +17,7 @@ Using the Charity starter kit, you can create:
 
 ### Requirements
 
-* Sitefinity 6.3 license
+* Sitefinity license
 
 * .NET Framework 4
 
@@ -46,11 +46,11 @@ The project refers to the following NuGet packages:
 
 *	DDay.iCal.nupkg – from nugget official package store
 
-* 	Telerik.Sitefinity.Core.nupkg
+* Telerik.Sitefinity.Core.nupkg
 
 *	Telerik.Sitefinity.Content.nupkg
 
-*	OpenAccess.Core.nupkg
+*	Telerik.DataAccess.Core.nupkg
 
 **Sitefinity.Widgets.Maps** library
 
@@ -72,7 +72,7 @@ The project refers to the following NuGet packages:
 
 *	Telerik.Sitefinity.Content.nupkg
 
-*	OpenAccess.Core.nupkg
+*	Telerik.DataAccess.Core.nupkg
 
 **TemplateImporter** library
 
@@ -80,7 +80,7 @@ The project refers to the following NuGet packages:
 
 *	Telerik.Web.UI.nupkg
 
-*	OpenAccess.Core.nupkg
+*	Telerik.DataAccess.Core.nupkg
 
 You can find the packages in the official [Sitefinity Nuget Server](http://nuget.sitefinity.com).
 
