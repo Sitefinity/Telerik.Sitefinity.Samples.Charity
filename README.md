@@ -1,6 +1,8 @@
 Telerik.Sitefinity.Samples.Charity
 ==================================
 
+[![Build Status](http://sdk-jenkins-ci.cloudapp.net/buildStatus/icon?job=Telerik.Sitefinity.Samples.Charity.CI)](http://sdk-jenkins-ci.cloudapp.net/job/Telerik.Sitefinity.Samples.Charity.CI/)
+
 The Charity starter kit (Telerik Charity) can be used to quickly create an interactive and engaging non-profit website. Originally inspired by the Microsoft GiveCamp charity events, the Charity starter kit contains a suite of useful custom widgets and helps educate developers about Sitefinity.
 
 Using the Charity starter kit, you can create:
@@ -44,7 +46,7 @@ The project refers to the following NuGet packages:
 
 **Sitefinity.Widgets.Calendar** library
 
-*	DDay.iCal.nupkg – from nugget official package store
+*	DDay.iCal.nupkg – from nuget official package store
 
 * Telerik.Sitefinity.Core.nupkg
 
@@ -64,7 +66,7 @@ The project refers to the following NuGet packages:
 
 *	Telerik.Sitefinity.All.nupkg
 
-*	DDay.iCal.nupkg – from nugget official package store
+*	DDay.iCal.nupkg – from nuget official package store
 
 **Telerik.Sitefinity.Samples.Common** library
 
@@ -82,7 +84,7 @@ The project refers to the following NuGet packages:
 
 *	Telerik.DataAccess.Core.nupkg
 
-You can find the packages in the official [Sitefinity Nuget Server](http://nuget.sitefinity.com).
+You can find the packages in the official [Sitefinity NuGet Server](http://nuget.sitefinity.com).
 
 ### Login
 
