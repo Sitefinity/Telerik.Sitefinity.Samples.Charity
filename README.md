@@ -42,49 +42,8 @@ Clear the NuGet cache files. To do this:
 2. Modify the **connectionString** value to match your server address.
 3. Build the solution.
 
-The project refers to the following NuGet packages:
-
-**Sitefinity.Widgets.Calendar** library
-
-*	DDay.iCal.nupkg – from nuget official package store
-
-* Telerik.Sitefinity.Core.nupkg
-
-*	Telerik.Sitefinity.Content.nupkg
-
-*	Telerik.DataAccess.Core.nupkg
-
-**Sitefinity.Widgets.Maps** library
-
-* Telerik.Sitefinity.Core.nupkg
-
-**Sitefinity.Widgets.Social** library
-
-*	Telerik.Sitefinity.Core.nupkg
-
-**SitefinityWebApp** library
-
-*	Telerik.Sitefinity.All.nupkg
-
-*	DDay.iCal.nupkg – from nuget official package store
-
-**Telerik.Sitefinity.Samples.Common** library
-
-*	Telerik.Sitefinity.Core.nupkg
-
-*	Telerik.Sitefinity.Content.nupkg
-
-*	Telerik.DataAccess.Core.nupkg
-
-**TemplateImporter** library
-
-*	Telerik.Sitefinity.Core.nupkg
-
-*	Telerik.Web.UI.nupkg
-
-*	Telerik.DataAccess.Core.nupkg
-
-You can find the packages in the official [Sitefinity NuGet Server](http://nuget.sitefinity.com).
+For version-specific details about the required Sitefinity NuGet packages for this sample application, click on [Releases]
+ (https://github.com/Sitefinity-SDK/Telerik.Sitefinity.Samples.Charity/releases).
 
 ### Login
 
