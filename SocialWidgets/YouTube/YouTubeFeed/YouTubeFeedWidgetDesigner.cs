@@ -40,6 +40,7 @@ namespace Sitefinity.Widgets.Social.YouTube
             {
                 return Resources.VirtualPathPrefix + LayoutTemplateReference;
             }
+
             set
             {
                 base.LayoutTemplatePath = value;

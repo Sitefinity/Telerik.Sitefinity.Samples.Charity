@@ -14,7 +14,6 @@ namespace Sitefinity.Widgets.Maps.Bing
     [RequireScriptManager]
 	public partial class BingMapWidget : SimpleView
 	{
-
 		#region Private Properties
 
 		private string _location = "Telerik";
@@ -224,6 +223,7 @@ namespace Sitefinity.Widgets.Maps.Bing
             {
                 return Resources.VirtualPathPrefix + "Sitefinity.Widgets.Maps.Bing.Map.BingMapWidget.ascx";
             }
+
             set
             {
                 base.LayoutTemplatePath = value;
@@ -252,7 +252,6 @@ namespace Sitefinity.Widgets.Maps.Bing
         /// </remarks>
 		protected override void InitializeControls(GenericContainer container)
 		{
-			
 		}
 
 		#endregion

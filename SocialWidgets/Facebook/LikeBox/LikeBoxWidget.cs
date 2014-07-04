@@ -11,9 +11,9 @@ namespace Sitefinity.Widgets.Social.Facebook
 	public partial class LikeBoxWidget : SimpleView
 	{
 		#region Constants
-		const string IFRAME_SRC = "<iframe src=\"http://www.facebook.com/plugins/likebox.php?href={0}&amp;width={1}&amp;colorscheme={2}&amp;connections={3}&amp;stream={4}&amp;header={5}&amp;height={6}\" height=\"{6}\" width=\"{1}\" scrolling=\"no\" frameborder=\"0\" style=\"border: none; overflow: hidden; width: {1}px; height: {6}px;\"></iframe>";
-		const string FBML_SCRIPT = "<script src=\"http://connect.facebook.net/en_US/all.js#xfbml=1\"></script>";
-		const string FBML_SRC = "<fb:like-box href=\"{0}\" width=\"{1}\" colorscheme=\"{2}\" connections=\"{3}\" stream=\"{4}\" header=\"{5}\" height=\"{6}\"></fb:like-box>";
+		public const string IFRAME_SRC = "<iframe src=\"http://www.facebook.com/plugins/likebox.php?href={0}&amp;width={1}&amp;colorscheme={2}&amp;connections={3}&amp;stream={4}&amp;header={5}&amp;height={6}\" height=\"{6}\" width=\"{1}\" scrolling=\"no\" frameborder=\"0\" style=\"border: none; overflow: hidden; width: {1}px; height: {6}px;\"></iframe>";
+		public const string FBML_SCRIPT = "<script src=\"http://connect.facebook.net/en_US/all.js#xfbml=1\"></script>";
+		public const string FBML_SRC = "<fb:like-box href=\"{0}\" width=\"{1}\" colorscheme=\"{2}\" connections=\"{3}\" stream=\"{4}\" header=\"{5}\" height=\"{6}\"></fb:like-box>";
 		#endregion
 
 		#region Private Properties
@@ -156,6 +156,7 @@ namespace Sitefinity.Widgets.Social.Facebook
             {
                 return Resources.VirtualPathPrefix + "Sitefinity.Widgets.Social.Facebook.LikeBox.LikeBoxWidget.ascx";
             }
+
             set
             {
                 base.LayoutTemplatePath = value;

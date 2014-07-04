@@ -9,7 +9,6 @@
 	/// Enumeration to determine what method to use to render the Facebook LikeBox (IFRAME or FBML)
 	/// </summary>
 	public enum WidgetModeType { IFRAME, FBML }
-
 }
 
 namespace Sitefinity.Widgets.Social.Facebook

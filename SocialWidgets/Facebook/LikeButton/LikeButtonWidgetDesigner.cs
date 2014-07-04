@@ -40,6 +40,7 @@ namespace Sitefinity.Widgets.Social.Facebook
             {
                 return Resources.VirtualPathPrefix + LayoutTemplateReference;
             }
+
             set
             {
                 base.LayoutTemplatePath = value;

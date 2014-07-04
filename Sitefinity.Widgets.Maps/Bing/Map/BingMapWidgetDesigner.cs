@@ -36,6 +36,7 @@ namespace Sitefinity.Widgets.Maps.Bing
             {
                 return Resources.VirtualPathPrefix + LayoutTemplateReference;
             }
+
             set
             {
                 base.LayoutTemplatePath = value;

@@ -80,7 +80,6 @@ namespace SitefinityWebApp.Widgets.Calendar
 
 		#region Overrides
 
-
 		/// <summary>
 		/// Gets or sets the layout template path.
 		/// </summary>

@@ -12,7 +12,9 @@ namespace SitefinityWebApp.Widgets.Donations
 		#region Public Properties
 		
 		public string PaypalEmail { get; set; }
+
 		public string OrganizationName { get; set; }
+
 		public bool ShowCreditCardLogos { get; set; }
 
 		#endregion
@@ -25,8 +27,6 @@ namespace SitefinityWebApp.Widgets.Donations
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			btnSubmit.ImageUrl = ShowCreditCardLogos ? "https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" : "https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif";
-		}
-
-		
+		}		
 	}
 }

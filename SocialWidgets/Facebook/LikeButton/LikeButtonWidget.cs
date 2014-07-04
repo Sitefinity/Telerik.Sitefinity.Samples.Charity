@@ -163,6 +163,7 @@ namespace Sitefinity.Widgets.Social.Facebook
             {
                 return Resources.VirtualPathPrefix + "Sitefinity.Widgets.Social.Facebook.LikeButton.LikeButtonWidget.ascx";
             }
+
             set
             {
                 base.LayoutTemplatePath = value;

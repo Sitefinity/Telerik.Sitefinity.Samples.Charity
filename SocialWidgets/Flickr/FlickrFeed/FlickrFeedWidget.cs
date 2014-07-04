@@ -104,6 +104,7 @@ namespace Sitefinity.Widgets.Social.Flickr
 		{
 			get { return null; }
 		}
+
         /// <summary>
         /// Gets or sets the path of the external template to be used by the control.
         /// </summary>
@@ -114,6 +115,7 @@ namespace Sitefinity.Widgets.Social.Flickr
             {
                 return Resources.VirtualPathPrefix + "Sitefinity.Widgets.Social.Flickr.FlickrFeed.FlickrFeedWidget.ascx";
             }
+
             set
             {
                 base.LayoutTemplatePath = value;
@@ -123,7 +125,6 @@ namespace Sitefinity.Widgets.Social.Flickr
 
 		protected override void InitializeControls(GenericContainer container)
 		{
-
 		}
 
 		protected override void OnLoad(EventArgs e)

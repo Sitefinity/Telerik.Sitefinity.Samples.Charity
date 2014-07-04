@@ -15,6 +15,7 @@ namespace SitefinityWebApp.Tools
 			{
 				return _wordlength;
 			}
+
 			set
 			{
 				_wordlength = value;
@@ -30,6 +31,7 @@ namespace SitefinityWebApp.Tools
 			{
 				return WordLength;
 			}
+
 			set
 			{
 				WordLength = value;

@@ -108,6 +108,7 @@ namespace Sitefinity.Widgets.Social.YouTube
             {
                 return Resources.VirtualPathPrefix + "Sitefinity.Widgets.Social.YouTube.YouTubeFeed.YouTubeFeedWidget.ascx";
             }
+
             set
             {
                 base.LayoutTemplatePath = value;

@@ -43,6 +43,7 @@ namespace Sitefinity.Widgets.Social.Twitter
             {
                 return Resources.VirtualPathPrefix + LayoutTemplateReference;
             }
+
             set
             {
                 base.LayoutTemplatePath = value;

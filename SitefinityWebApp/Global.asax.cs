@@ -7,9 +7,12 @@ using System.Web;
 using System.Web.Routing;
 using System.Web.UI;
 using Telerik.Sitefinity;
+using Telerik.Sitefinity.Abstractions;
 using Telerik.Sitefinity.Abstractions.VirtualPath;
 using Telerik.Sitefinity.Abstractions.VirtualPath.Configuration;
+using Telerik.Sitefinity.Blogs.Model;
 using Telerik.Sitefinity.Configuration;
+using Telerik.Sitefinity.Data.OA;
 using Telerik.Sitefinity.Modules.Blogs.Web.UI;
 using Telerik.Sitefinity.Modules.Blogs.Web.UI.Public;
 using Telerik.Sitefinity.Modules.Events.Web.UI;
@@ -18,15 +21,12 @@ using Telerik.Sitefinity.Modules.Forms.Web.UI;
 using Telerik.Sitefinity.Modules.Forms.Web.UI.Fields;
 using Telerik.Sitefinity.Modules.GenericContent.Web.UI;
 using Telerik.Sitefinity.Modules.News.Web.UI;
+using Telerik.Sitefinity.Modules.Pages;
+using Telerik.Sitefinity.Publishing.Model;
 using Telerik.Sitefinity.Samples.Common;
+using Telerik.Sitefinity.Services;
 using Telerik.Sitefinity.Web.UI.NavigationControls;
 using Telerik.Sitefinity.Web.UI.PublicControls;
-using Telerik.Sitefinity.Blogs.Model;
-using Telerik.Sitefinity.Publishing.Model;
-using Telerik.Sitefinity.Abstractions;
-using Telerik.Sitefinity.Modules.Pages;
-using Telerik.Sitefinity.Services;
-using Telerik.Sitefinity.Data.OA;
 
 namespace SitefinityWebApp
 {
@@ -52,22 +52,14 @@ namespace SitefinityWebApp
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            // Code that runs on application startup
-            Telerik.Sitefinity.Abstractions.Bootstrapper.Initialized += new EventHandler<Telerik.Sitefinity.Data.ExecutedEventArgs>(Bootstrapper_Initialized);
+            // Code that runs on application startup       
+            SystemManager.ApplicationStart += SystemManager_ApplicationStart;
         }
 
-        private void Bootstrapper_Initialized(object sender, Telerik.Sitefinity.Data.ExecutedEventArgs args)
+        private void SystemManager_ApplicationStart(object sender, EventArgs e)
         {
-            if (args.CommandName == "RegisterRoutes")
-            {
-                
-            }
-
-            if (args.CommandName == "Bootstrapped")
-            {
-                SystemManager.RunWithElevatedPrivilegeDelegate worker = new SystemManager.RunWithElevatedPrivilegeDelegate(CreateSample);
-                SystemManager.RunWithElevatedPrivilege(worker);
-            }
+            SystemManager.RunWithElevatedPrivilegeDelegate worker = new SystemManager.RunWithElevatedPrivilegeDelegate(CreateSample);
+            SystemManager.RunWithElevatedPrivilege(worker);
         }
 
         private void CreateSample(object[] args)
@@ -750,32 +742,26 @@ In condimentum, quam eget bibendum ultrices, quam dolor mollis lorem, at consect
 
         protected void Session_Start(object sender, EventArgs e)
         {
-
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
-
         }
 
         protected void Application_AuthenticateRequest(object sender, EventArgs e)
         {
-
         }
 
         protected void Application_Error(object sender, EventArgs e)
         {
-
         }
 
         protected void Session_End(object sender, EventArgs e)
         {
-
         }
 
         protected void Application_End(object sender, EventArgs e)
         {
-
         }
 
         private void ConfigManager_Executed(object sender, Telerik.Sitefinity.Data.ExecutedEventArgs args)

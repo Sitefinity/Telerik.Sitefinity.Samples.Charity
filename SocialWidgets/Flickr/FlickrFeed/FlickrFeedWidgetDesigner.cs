@@ -40,11 +40,13 @@ namespace Sitefinity.Widgets.Social.Flickr
             {
                 return Resources.VirtualPathPrefix + LayoutTemplateReference;
             }
+
             set
             {
                 base.LayoutTemplatePath = value;
             }
         }
+
 		/// <summary>
 		/// Gets the script references.
 		/// </summary>

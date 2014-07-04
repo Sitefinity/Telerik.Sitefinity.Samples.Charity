@@ -179,6 +179,7 @@ namespace Sitefinity.Widgets.Social.Twitter
             {
                 return Resources.VirtualPathPrefix + "Sitefinity.Widgets.Social.Twitter.TwitterFeed.TwitterFeedWidget.ascx";
             }
+
             set
             {
                 base.LayoutTemplatePath = value;
@@ -191,7 +192,6 @@ namespace Sitefinity.Widgets.Social.Twitter
 		/// <param name="container">The container.</param>
 		protected override void InitializeControls(GenericContainer container)
 		{
-
 		}
 
 		#endregion

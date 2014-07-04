@@ -90,15 +90,12 @@ namespace SitefinityWebApp.App_Custom.iCal
 
 				// event location
 				var location = ev.Street;
-			   // location = location == null ? ev.ContentItem.GetMetaData("Street") : string.Concat(location, " (", ev.ContentItem.GetMetaData("Street"), ")");
-				appt.Location = location.ToString();
+			  
+                appt.Location = location.ToString();
 
 				appt.Summary = ev.Title;
 
-				// url
-				//var evUrl = ConfigurationManager.AppSettings[EventsManager.DefaultContentProvider + "Url"];
-				//if (string.IsNullOrEmpty(evUrl)) break;
-				appt.Url = new Uri("http://www.bing.com");// string.Concat("http://", host, evUrl, ev.ContentItem.UrlWithExtension);
+				appt.Url = new Uri("http://www.bing.com");
 				cal.Events.Add(appt);
 			}
 

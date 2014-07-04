@@ -35,11 +35,13 @@ namespace Sitefinity.Widgets.Calendar.iCalFeed
             {
                 return Resources.VirtualPathPrefix + LayoutTemplateReference;
             }
+
             set
             {
                 base.LayoutTemplatePath = value;
             }
         }
+
 		/// <summary>
 		/// Gets the script references.
 		/// </summary>
