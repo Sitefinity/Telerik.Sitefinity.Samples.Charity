@@ -12,12 +12,12 @@ namespace SitefinityWebApp.Tools
 		{
 			get
 			{
-				return _wordlength;
+				return this.wordlength;
 			}
 
 			set
 			{
-				_wordlength = value;
+				this.wordlength = value;
 			}
 		}
 
@@ -28,22 +28,22 @@ namespace SitefinityWebApp.Tools
 		{
 			get
 			{
-				return WordLength;
+                return this.WordLength;
 			}
 
 			set
 			{
-				WordLength = value;
+                this.WordLength = value;
 			}
 		}
 
 		protected override void CreateChildControls()
 		{
-			var settings = new SummarySettings(SummaryMode.Words, WordLength, false);
-			Text = SummaryParser.GetSummary(Text, settings);
+            var settings = new SummarySettings(SummaryMode.Words, this.WordLength, false);
+            this.Text = SummaryParser.GetSummary(this.Text, settings);
 			base.CreateChildControls();
 		}
 
-		private int _wordlength = 20;
+		private int wordlength = 20;
 	}
 }

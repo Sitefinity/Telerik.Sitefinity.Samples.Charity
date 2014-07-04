@@ -1,9 +1,9 @@
-﻿using DDay.iCal;
-using DDay.iCal.Serialization.iCalendar;
-using System;
+﻿using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
+using DDay.iCal;
+using DDay.iCal.Serialization.iCalendar;
 using Telerik.Sitefinity;
 
 namespace SitefinityWebApp.App_Custom.iCal
@@ -28,10 +28,10 @@ namespace SitefinityWebApp.App_Custom.iCal
 		/// </summary>
 		/// <param name="Year">The year.</param>
 		/// <param name="Month">The month.</param>
-		public iCalFeedHttpHandler(int Year, int Month)
+		public iCalFeedHttpHandler(int year, int month)
 		{
-			this.year = Year;
-			this.month = Month;
+			this.year = year;
+			this.month = month;
 		}
 
 		/// <summary>
@@ -63,7 +63,7 @@ namespace SitefinityWebApp.App_Custom.iCal
 			IQueryable events;
 			using (var fluent = App.WorkWith())
 			{
-				var center = new DateTime(year, month, 1);
+				var center = new DateTime(this.year, this.month, 1);
 				var start = center.AddMonths(-6);
 				var end = center.AddMonths(6);
 
@@ -86,7 +86,7 @@ namespace SitefinityWebApp.App_Custom.iCal
 
 				// non-html property
 				var reg = new Regex("<(.|\n)+?>");
-				appt.Description = reg.Replace(description, "");
+				appt.Description = reg.Replace(description, string.Empty);
 
 				// event location
 				var location = ev.Street;

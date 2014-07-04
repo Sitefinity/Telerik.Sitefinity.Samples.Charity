@@ -52,7 +52,7 @@ namespace SitefinityWebApp.App_Custom.iCal
 
             // non-html property
             var reg = new Regex("<(.|\n)+?>");
-            appt.Description = reg.Replace(description, "");
+            appt.Description = reg.Replace(description, string.Empty);
 
             // event location
             var location = ev.Street;

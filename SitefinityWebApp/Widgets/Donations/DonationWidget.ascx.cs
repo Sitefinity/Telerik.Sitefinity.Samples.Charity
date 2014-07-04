@@ -26,7 +26,7 @@ namespace SitefinityWebApp.Widgets.Donations
 		/// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			btnSubmit.ImageUrl = ShowCreditCardLogos ? "https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" : "https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif";
+            this.btnSubmit.ImageUrl = this.ShowCreditCardLogos ? "https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" : "https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif";
 		}		
 	}
 }

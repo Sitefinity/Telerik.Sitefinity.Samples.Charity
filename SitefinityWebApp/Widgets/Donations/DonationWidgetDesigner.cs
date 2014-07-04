@@ -11,20 +11,20 @@ namespace SitefinityWebApp.Widgets.Donations
             base.DesignerMode = ControlDesignerModes.Simple;
         }
 
-        private string _layoutTemplatePath = "~/Widgets/Donations/DonationWidgetDesignerTemplate.ascx";
+        private string layoutTemplatePath = "~/Widgets/Donations/DonationWidgetDesignerTemplate.ascx";
 
         public override string LayoutTemplatePath
         {
-            get { return _layoutTemplatePath; }
-            set { _layoutTemplatePath = value; }
+            get { return this.layoutTemplatePath; }
+            set { this.layoutTemplatePath = value; }
         }
 
-        private string _scriptPath = "~/Widgets/Donations/DonationWidgetDesigner.js";
+        private string scriptPath = "~/Widgets/Donations/DonationWidgetDesigner.js";
 
         public string DesignerScriptPath
         {
-            get { return _scriptPath; }
-            set { _scriptPath = value; }
+            get { return this.scriptPath; }
+            set { this.scriptPath = value; }
         }
 
         protected override string LayoutTemplateName
@@ -37,7 +37,7 @@ namespace SitefinityWebApp.Widgets.Donations
             var scripts = base.GetScriptReferences() as List<ScriptReference>;
             if (scripts == null) return base.GetScriptReferences();
 
-            scripts.Add(new ScriptReference(DesignerScriptPath));
+            scripts.Add(new ScriptReference(this.DesignerScriptPath));
             return scripts.ToArray();
         }
     }

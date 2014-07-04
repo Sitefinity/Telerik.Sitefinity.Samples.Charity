@@ -1,11 +1,11 @@
-﻿using SitefinityWebApp.App_Custom.iCal;
-using SitefinityWebApp.Widgets.SampleLayoutControl;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Routing;
 using System.Web.UI;
+using SitefinityWebApp.App_Custom.iCal;
+using SitefinityWebApp.Widgets.SampleLayoutControl;
 using Telerik.Sitefinity;
 using Telerik.Sitefinity.Abstractions;
 using Telerik.Sitefinity.Abstractions.VirtualPath;
@@ -53,12 +53,12 @@ namespace SitefinityWebApp
         protected void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup       
-            SystemManager.ApplicationStart += SystemManager_ApplicationStart;
+            SystemManager.ApplicationStart += this.SystemManager_ApplicationStart;
         }
 
         private void SystemManager_ApplicationStart(object sender, EventArgs e)
         {
-            SystemManager.RunWithElevatedPrivilegeDelegate worker = new SystemManager.RunWithElevatedPrivilegeDelegate(CreateSample);
+            SystemManager.RunWithElevatedPrivilegeDelegate worker = new SystemManager.RunWithElevatedPrivilegeDelegate(this.CreateSample);
             SystemManager.RunWithElevatedPrivilege(worker);
         }
 

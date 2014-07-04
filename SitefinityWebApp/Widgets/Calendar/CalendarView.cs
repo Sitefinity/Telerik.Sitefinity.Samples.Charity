@@ -18,13 +18,13 @@ namespace SitefinityWebApp.Widgets.Calendar
 	{
 		#region Private Members
 
-		private Unit _width = new Unit("100%");
-		private Unit _height = new Unit("400px");
-		private int _maxItems = 4;
-		private string _template = "~/Widgets/Calendar/CalendarViewTemplate.ascx";
+		private Unit width = new Unit("100%");
+		private Unit height = new Unit("400px");
+		private int maxItems = 4;
+		private string template = "~/Widgets/Calendar/CalendarViewTemplate.ascx";
 
 		ILookup<int, Event> Month_Events;
-		protected DateTime SelectedDate;
+		protected DateTime selectedDate;
 
 		#endregion
 
@@ -46,8 +46,8 @@ namespace SitefinityWebApp.Widgets.Calendar
 		/// <exception cref="T:System.ArgumentException">The width of the Web server control was set to a negative value. </exception>
 		public override Unit Width
 		{
-			get { return _width; }
-			set { _width = value; }
+            get { return this.width; }
+            set { this.width = value; }
 		}
 
 		/// <summary>
@@ -58,8 +58,8 @@ namespace SitefinityWebApp.Widgets.Calendar
 		/// <exception cref="T:System.ArgumentException">The height was set to a negative value.</exception>
 		public override Unit Height
 		{
-			get { return _height; }
-			set { _height = value; }
+			get { return this.height; }
+            set { this.height = value; }
 		}
 
 		/// <summary>
@@ -70,8 +70,8 @@ namespace SitefinityWebApp.Widgets.Calendar
 		/// </value>
 		public int MaxItems
 		{
-			get { return _maxItems; }
-			set { _maxItems = value; }
+            get { return this.maxItems; }
+            set { this.maxItems = value; }
 		}
 
 		#endregion
@@ -86,8 +86,8 @@ namespace SitefinityWebApp.Widgets.Calendar
 		/// </value>
 		public override string LayoutTemplatePath
 		{
-			get { return _template; }
-			set { _template = value; }
+            get { return this.template; }
+            set { this.template = value; }
 		}
 
 		/// <summary>
@@ -143,24 +143,24 @@ namespace SitefinityWebApp.Widgets.Calendar
 		protected override void InitializeControls(GenericContainer container)
 		{
 			// defaults
-			EventCalendar.Width = _width;
-			EventCalendar.Height = _height;
+            this.EventCalendar.Width = this.width;
+            this.EventCalendar.Height = this.height;
 
 			// attach event handlers
-			EventCalendar.DayRender += Cal_DayRender;
-			EventCalendar.DefaultViewChanged += Cal_DefaultViewChanged;
+            this.EventCalendar.DayRender += this.Cal_DayRender;
+            this.EventCalendar.DefaultViewChanged += this.Cal_DefaultViewChanged;
 
 			// retrieve details page url
-			DetailsPage = GetDetailsPage();
+            this.DetailsPage = this.GetDetailsPage();
 
 			// empty page means use the current page
-			if (string.IsNullOrEmpty(DetailsPage)) DetailsPage = HttpContext.Current.Request.RawUrl;
+            if (string.IsNullOrEmpty(this.DetailsPage)) this.DetailsPage = HttpContext.Current.Request.RawUrl;
 
 			if (Page.IsPostBack) return;
 
 			// init calendar
-			SelectedDate = EventCalendar.FocusedDate;
-			LoadData();
+            this.selectedDate = this.EventCalendar.FocusedDate;
+            this.LoadData();
 		}
 
 		/// <summary>
@@ -174,8 +174,8 @@ namespace SitefinityWebApp.Widgets.Calendar
 			using (var fluent = App.WorkWith())
 			{
 				// range for current month only
-				var start = new DateTime(SelectedDate.Year, SelectedDate.Month, 1);
-				var end = new DateTime(SelectedDate.Year, SelectedDate.Month, DateTime.DaysInMonth(SelectedDate.Year, SelectedDate.Month));
+                var start = new DateTime(this.selectedDate.Year, this.selectedDate.Month, 1);
+                var end = new DateTime(this.selectedDate.Year, this.selectedDate.Month, DateTime.DaysInMonth(this.selectedDate.Year, this.selectedDate.Month));
 
 				// get events
 				events = fluent.Events().Where(e => e.EventStart >= start && e.EventEnd <= end && e.Status == Telerik.Sitefinity.GenericContent.Model.ContentLifecycleStatus.Live).Get();
@@ -185,7 +185,7 @@ namespace SitefinityWebApp.Widgets.Calendar
 			if (events.Count() == 0) return;
 
 			// parse to collection
-			Month_Events = events.ToLookup(e => e.EventStart.Day);
+            this.Month_Events = events.ToLookup(e => e.EventStart.Day);
 		}
 
 		/// <summary>
@@ -196,23 +196,23 @@ namespace SitefinityWebApp.Widgets.Calendar
 		protected void Cal_DayRender(object sender, Telerik.Web.UI.Calendar.DayRenderEventArgs e)
 		{
 			// skip other month days
-			if (e.Day.Date.Month != SelectedDate.Month) return;
+            if (e.Day.Date.Month != this.selectedDate.Month) return;
 
 			// no events?
-			if (Month_Events == null || Month_Events[e.Day.Date.Day].Count() == 0) return;
+            if (this.Month_Events == null || this.Month_Events[e.Day.Date.Day].Count() == 0) return;
 
 			// build links to events
 			var sb = new StringBuilder();
 			sb.Append("<ul>");
 
 			// parse events
-			foreach (var ev in Month_Events[e.Day.Date.Day])
+            foreach (var ev in this.Month_Events[e.Day.Date.Day])
 			{
 				// details page set?
-				if (string.IsNullOrEmpty(DetailsPage))
+				if (string.IsNullOrEmpty(this.DetailsPage))
 					sb.AppendFormat("<li><a href=\"{0}\">{1}</a></li>", ev.Urls[0].Url, ev.Title); // use current page
 				else
-					sb.AppendFormat("<li><a href=\"{0}{1}\">{2}</a></li>", ResolveUrl(DetailsPage), ev.Urls[0].Url, ev.Title); // use details page
+                    sb.AppendFormat("<li><a href=\"{0}{1}\">{2}</a></li>", this.ResolveUrl(this.DetailsPage), ev.Urls[0].Url, ev.Title); // use details page
 			}
 
 			sb.Append("</ul>");
@@ -224,10 +224,10 @@ namespace SitefinityWebApp.Widgets.Calendar
 		protected void Cal_DefaultViewChanged(object sender, Telerik.Web.UI.Calendar.DefaultViewChangedEventArgs e)
 		{
 			// select the new date
-			SelectedDate = e.NewView.ParentCalendar.FocusedDate;
-			EventCalendar.SelectedDate = EventCalendar.FocusedDate = SelectedDate;
+            this.selectedDate = e.NewView.ParentCalendar.FocusedDate;
+            this.EventCalendar.SelectedDate = this.EventCalendar.FocusedDate = this.selectedDate;
 
-			LoadData();
+            this.LoadData();
 		}
 	}
 }
