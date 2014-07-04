@@ -192,7 +192,6 @@ namespace SitefinityWebApp
 
             if (!postsCreated)
             {
-
                 var title = "Charity Starter Kit now available!";
                 var content = @"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non lectus at sem consequat suscipit. Etiam nunc sem, condimentum a feugiat sit amet, consectetur sed justo. Nullam purus erat, tincidunt sed commodo ac, mollis vel neque. Vestibulum volutpat nulla in enim aliquet vitae ornare nunc gravida. </p>
 <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam ipsum nisl, tempor at tincidunt quis, congue vel purus. Duis sodales, est quis mollis posuere, mi mauris mollis sapien, ut rhoncus leo justo sed dolor. Etiam blandit tincidunt velit ac pellentesque. Cras nec leo lacus. Maecenas vel ipsum vitae dolor ultrices tempus. </p>
@@ -530,10 +529,6 @@ namespace SitefinityWebApp
                 TwitterFeed twitterFeed = new TwitterFeed();
                 twitterFeed.Username = "Sitefinity";
                 twitterFeed.ShowTimestamps = true;
-                //twitterFeed.ShellBackgroundColor = "";
-                //twitterFeed.ShellTextColor = "";
-                //twitterFeed.TweetTextColor = "";
-                //twitterFeed.LinksColor = "";
 
                 SampleUtilities.AddControlToPage(new Guid(NewsPageId), twitterFeed, "Main_TwoColumns_Sidebar", "Twitter Feed");
             }

@@ -29,6 +29,7 @@ namespace Sitefinity.Widgets.Calendar.iCalFeed
 		{
 			get { return null; }
 		}
+
         public override string LayoutTemplatePath
         {
             get

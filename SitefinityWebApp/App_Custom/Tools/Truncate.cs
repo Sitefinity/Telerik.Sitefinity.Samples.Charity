@@ -5,7 +5,6 @@ namespace SitefinityWebApp.Tools
 {
 	public class Truncate : Literal
 	{
-
 		/// <summary>
 		/// Determines how many words the Text will be truncated to.  Sitefinity will preserve the HTML.
 		/// </summary>

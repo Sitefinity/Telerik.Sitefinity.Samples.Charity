@@ -37,7 +37,6 @@ namespace SitefinityWebApp.Widgets.Calendar
 		/// The details page url.
 		/// </value>
 		public string DetailsPage { get; set; }
-
 		
 		/// <summary>
 		/// Gets or sets the width of the Web server control.
@@ -62,7 +61,6 @@ namespace SitefinityWebApp.Widgets.Calendar
 			get { return _height; }
 			set { _height = value; }
 		}
-
 
 		/// <summary>
 		/// Gets or sets the max number of events to show in a day cell.
@@ -216,6 +214,7 @@ namespace SitefinityWebApp.Widgets.Calendar
 				else
 					sb.AppendFormat("<li><a href=\"{0}{1}\">{2}</a></li>", ResolveUrl(DetailsPage), ev.Urls[0].Url, ev.Title); // use details page
 			}
+
 			sb.Append("</ul>");
 			
 			// write html

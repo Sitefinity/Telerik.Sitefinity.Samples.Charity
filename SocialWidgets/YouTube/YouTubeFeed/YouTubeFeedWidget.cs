@@ -59,7 +59,7 @@ namespace Sitefinity.Widgets.Social.YouTube
 
 		#region Constants
 
-		const string FEED_URL = "http://gdata.youtube.com/feeds/base/users/{0}/uploads?alt=rss";
+		public const string FEED_URL = "http://gdata.youtube.com/feeds/base/users/{0}/uploads?alt=rss";
 
 		#endregion
 
@@ -118,7 +118,6 @@ namespace Sitefinity.Widgets.Social.YouTube
 
 		protected override void InitializeControls(GenericContainer container)
 		{
-
 		}
 
 		protected override void OnLoad(EventArgs e)

@@ -12,6 +12,7 @@ namespace SitefinityWebApp.Widgets.Donations
         }
 
         private string _layoutTemplatePath = "~/Widgets/Donations/DonationWidgetDesignerTemplate.ascx";
+
         public override string LayoutTemplatePath
         {
             get { return _layoutTemplatePath; }
@@ -19,6 +20,7 @@ namespace SitefinityWebApp.Widgets.Donations
         }
 
         private string _scriptPath = "~/Widgets/Donations/DonationWidgetDesigner.js";
+
         public string DesignerScriptPath
         {
             get { return _scriptPath; }

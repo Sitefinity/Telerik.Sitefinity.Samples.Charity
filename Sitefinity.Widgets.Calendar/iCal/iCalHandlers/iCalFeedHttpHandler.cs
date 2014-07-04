@@ -1,9 +1,9 @@
-﻿using DDay.iCal;
-using DDay.iCal.Serialization.iCalendar;
-using System;
+﻿using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
+using DDay.iCal;
+using DDay.iCal.Serialization.iCalendar;
 using Telerik.Sitefinity;
 
 namespace Sitefinity.Widgets.Calendar.iCal.iCalHandler

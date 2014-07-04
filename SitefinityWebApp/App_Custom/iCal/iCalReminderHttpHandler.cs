@@ -56,15 +56,12 @@ namespace SitefinityWebApp.App_Custom.iCal
 
             // event location
             var location = ev.Street;
-            // location = location == null ? ev.ContentItem.GetMetaData("Street") : string.Concat(location, " (", ev.ContentItem.GetMetaData("Street"), ")");
+
             appt.Location = location.ToString();
 
             appt.Summary = ev.Title;
 
             // url
-            //var evUrl = ConfigurationManager.AppSettings[EventsManager.DefaultContentProvider + "Url"];
-            //if (string.IsNullOrEmpty(evUrl)) break;
-            appt.Url = new Uri("http://www.bing.com");// string.Concat("http://", host, evUrl, ev.ContentItem.UrlWithExtension);
             cal.Events.Add(appt);
 
             // write calendar feed!
@@ -73,10 +70,8 @@ namespace SitefinityWebApp.App_Custom.iCal
             context.Response.ContentType = "text/calendar";
             context.Response.AddHeader("content-disposition", "attachment; filename=Calendar.ics");
             context.Response.Write(ser.SerializeToString());
-            //context.Response.Flush();
         }
 
         private Guid eventID;
-
     }
 }

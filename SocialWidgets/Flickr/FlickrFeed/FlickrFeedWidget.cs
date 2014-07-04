@@ -172,7 +172,5 @@ namespace Sitefinity.Widgets.Social.Flickr
 			lnkTimeStamp.NavigateUrl = DataBinder.Eval(dataItem, "Url").ToString();
 			lnkTimeStamp.Text = DataBinder.Eval(dataItem, "Title").ToString();
 		}
-
-
 	}
 }

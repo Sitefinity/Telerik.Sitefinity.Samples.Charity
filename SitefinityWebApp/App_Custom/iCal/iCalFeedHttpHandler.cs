@@ -105,7 +105,6 @@ namespace SitefinityWebApp.App_Custom.iCal
 			context.Response.ContentType = "text/calendar";
 			context.Response.AddHeader("content-disposition", "attachment; filename=Calendar.ics");
 			context.Response.Write(ser.SerializeToString());
-			//context.Response.Flush();
 		}
 	}
 }

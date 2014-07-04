@@ -1,13 +1,13 @@
-﻿namespace Sitefinity.Widgets.Calendar.iCal.iCalHandler
-{
-    using DDay.iCal;
-    using DDay.iCal.Serialization.iCalendar;
-    using System;
-    using System.Linq;
-    using System.Text.RegularExpressions;
-    using System.Web;
-    using Telerik.Sitefinity;
+﻿using System;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Web;
+using DDay.iCal;
+using DDay.iCal.Serialization.iCalendar;
+using Telerik.Sitefinity;
 
+namespace Sitefinity.Widgets.Calendar.iCal.iCalHandler
+{
 	public class iCalReminderHttpHandler : IHttpHandler
 	{
 		public iCalReminderHttpHandler(Guid id)
@@ -56,15 +56,12 @@
 
 			// event location
 			var location = ev.Street;
-			// location = location == null ? ev.ContentItem.GetMetaData("Street") : string.Concat(location, " (", ev.ContentItem.GetMetaData("Street"), ")");
 			appt.Location = location.ToString();
 
 			appt.Summary = ev.Title;
 
 			// url
-			//var evUrl = ConfigurationManager.AppSettings[EventsManager.DefaultContentProvider + "Url"];
-			//if (string.IsNullOrEmpty(evUrl)) break;
-			appt.Url = new Uri("http://www.bing.com");// string.Concat("http://", host, evUrl, ev.ContentItem.UrlWithExtension);
+			appt.Url = new Uri("http://www.bing.com");
 			cal.Events.Add(appt);
 
 			// write calendar feed!
@@ -73,7 +70,6 @@
 			context.Response.ContentType = "text/calendar";
 			context.Response.AddHeader("content-disposition", "attachment; filename=Calendar.ics");
 			context.Response.Write(ser.SerializeToString());
-			//context.Response.Flush();
 		}
 
 		private Guid eventID;

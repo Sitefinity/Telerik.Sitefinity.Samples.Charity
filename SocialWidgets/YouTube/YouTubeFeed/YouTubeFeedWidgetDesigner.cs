@@ -46,6 +46,7 @@ namespace Sitefinity.Widgets.Social.YouTube
                 base.LayoutTemplatePath = value;
             }
         }
+
 		/// <summary>
 		/// Gets the script references.
 		/// </summary>

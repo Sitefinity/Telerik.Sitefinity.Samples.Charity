@@ -6,7 +6,6 @@ namespace SitefinityWebApp.Widgets.Calendar
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
     }
 }
