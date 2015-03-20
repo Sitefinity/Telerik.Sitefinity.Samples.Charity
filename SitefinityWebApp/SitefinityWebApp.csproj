@@ -670,9 +670,6 @@
     <EmbeddedResource Include="Widgets\Templates\EventsDateListTemplate.ascx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Sitefinity\Configuration\DataConfig.config">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="App_Data\Sitefinity\WebsiteTemplates\CharityBlue\App_Themes\CharityBlue\Global\main.css" />
     <Content Include="App_Data\Sitefinity\WebsiteTemplates\CharityBlue\App_Themes\CharityBlue\Images\donate.png" />
     <Content Include="App_Data\Sitefinity\WebsiteTemplates\CharityBlue\App_Themes\CharityBlue\Images\header_background.jpg" />
@@ -1277,6 +1274,7 @@
     <Content Include="ResourcePackages\Bootstrap\assets\src\sass\_sf-social-share.sass" />
     <Content Include="ResourcePackages\Bootstrap\assets\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="OpenAccessNuGet.targets" />
+    <Content Include="App_Data\Sitefinity\Configuration\StartupConfig.config" />
     <None Include="Settings.StyleCop" />
   </ItemGroup>
   <PropertyGroup>
