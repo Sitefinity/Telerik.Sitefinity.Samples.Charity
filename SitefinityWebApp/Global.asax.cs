@@ -52,14 +52,16 @@ namespace SitefinityWebApp
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            // Code that runs on application startup       
-            SystemManager.ApplicationStart += this.SystemManager_ApplicationStart;
+            Bootstrapper.Initialized += Bootstrapper_Initialized;
         }
 
-        private void SystemManager_ApplicationStart(object sender, EventArgs e)
+        private void Bootstrapper_Initialized(object sender, Telerik.Sitefinity.Data.ExecutedEventArgs e)
         {
-            SystemManager.RunWithElevatedPrivilegeDelegate worker = new SystemManager.RunWithElevatedPrivilegeDelegate(this.CreateSample);
-            SystemManager.RunWithElevatedPrivilege(worker);
+            if ((Bootstrapper.IsDataInitialized) && (e.CommandName == "Bootstrapped"))
+            {
+                SystemManager.RunWithElevatedPrivilegeDelegate worker = new SystemManager.RunWithElevatedPrivilegeDelegate(CreateSample);
+                SystemManager.RunWithElevatedPrivilege(worker);
+            }
         }
 
         private void CreateSample(object[] args)
@@ -67,8 +69,6 @@ namespace SitefinityWebApp
             var availableLanguages = Telerik.Sitefinity.Abstractions.AppSettings.CurrentSettings.DefinedFrontendLanguages;
             if (availableLanguages.Length <= 1)
             {
-                SampleUtilities.CreateUsersAndRoles();
-
                 SampleUtilities.UploadImages(HttpRuntime.AppDomainAppPath + "CharityImages", "SiteImages");
 
                 ConfigManager.Executed += this.ConfigManager_Executed;
