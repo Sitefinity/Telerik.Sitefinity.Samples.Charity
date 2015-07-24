@@ -5,6 +5,10 @@
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
 <%@ Register Assembly="Telerik.Sitefinity" Namespace="Telerik.Sitefinity.Web.UI" TagPrefix="sf" %>
 <%@ Register Assembly="Telerik.Sitefinity" Namespace="Telerik.Sitefinity.Web.UI.ContentUI" TagPrefix="sf" %>	
+<%@ Register Assembly="Telerik.Sitefinity" Namespace="Telerik.Sitefinity.Modules.Comments.Web.UI.Frontend" TagPrefix="comments" %>
+<%@ Import Namespace="Telerik.Sitefinity" %>
+<%@ Import Namespace="Telerik.Sitefinity.Web.UI" %>
+<%@ Import Namespace="Telerik.Sitefinity.Modules.Comments" %>
 
 <telerik:RadListView ID="SingleItemContainer" ItemPlaceholderID="ItemContainer" AllowPaging="False" runat="server" EnableEmbeddedSkins="false" EnableEmbeddedBaseStylesheet="false">
     <LayoutTemplate>
@@ -51,17 +55,10 @@
                 <sf:MasterViewHyperLink class="sfeventBack" Text="<%$ Resources:EventsResources, AllEvents %>" runat="server" />
             </p>
 
-        <sf:ContentView 
-             id="commentsListView" 
-             ControlDefinitionName="EventsCommentsFrontend" 
-             DetailViewName="CommentsMasterView"
-             ContentViewDisplayMode="Master"
-             runat="server" />
-        <sf:ContentView 
-             id="commentsDetailsView" 
-             ControlDefinitionName="EventsCommentsFrontend" 
-             DetailViewName="CommentsDetailsView"
-             ContentViewDisplayMode="Detail"
-             runat="server" />
+        <comments:CommentsWidget runat="server" 
+            ThreadKey='<%# ControlUtilities.GetLocalizedKey(Eval("Id"), null, CommentsBehaviorUtilities.GetLocalizedKeySuffix(Container.DataItem.GetType().FullName)) %>' 
+            AllowComments='<%# Eval("AllowComments") %>' ThreadTitle='<%# Eval("Title") %>' ThreadType='<%# Container.DataItem.GetType().FullName %>' 
+            GroupKey='<%# ControlUtilities.GetUniqueProviderKey("Telerik.Sitefinity.Modules.Events.EventsManager", Eval("Provider.Name").ToString()) %>'
+            DataSource='<%# Eval("Provider.Name")%>' />
     </ItemTemplate>
 </telerik:RadListView>
