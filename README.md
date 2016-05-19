@@ -1,9 +1,9 @@
-Telerik.Sitefinity.Samples.Charity
+Progress.Sitefinity.Samples.Charity
 ==================================
 
 [![Build Status](http://sdk-jenkins-ci.cloudapp.net/buildStatus/icon?job=Telerik.Sitefinity.Samples.Charity.CI)](http://sdk-jenkins-ci.cloudapp.net/job/Telerik.Sitefinity.Samples.Charity.CI/)
 
-The Charity starter kit (Telerik Charity) can be used to quickly create an interactive and engaging non-profit website. Originally inspired by the Microsoft GiveCamp charity events, the Charity starter kit contains a suite of useful custom widgets and helps educate developers about Sitefinity.
+The Charity starter kit (Telerik Charity) can be used to quickly create an interactive and engaging non-profit website. Originally inspired by the Microsoft GiveCamp charity events, the Charity starter kit contains a suite of useful custom widgets and helps educate developers about Sitefinity CMS.
 
 Using the Charity starter kit, you can create:
 
@@ -19,7 +19,7 @@ Using the Charity starter kit, you can create:
 
 ### Requirements
 
-* Sitefinity license
+* Sitefinity CMS license
 * .NET Framework 4.5
 * Visual Studio 2012
 * Microsoft SQL Server 2008R2 or later versions
@@ -43,10 +43,10 @@ For a history and additional information related to package versions on differen
 2. Modify the **dbType**, **sqlInstance** and **dbName** values to match your server settings.
 3. Build the solution.
 
-For version-specific details about the required Sitefinity NuGet packages for this sample application, click on [Releases](https://github.com/Sitefinity-SDK/Telerik.Sitefinity.Samples.Charity/releases).
+For version-specific details about the required Sitefinity CMS NuGet packages for this sample application, click on [Releases](https://github.com/Sitefinity-SDK/Telerik.Sitefinity.Samples.Charity/releases).
 
 ### Login
 
-To login to Sitefinity backend, use the following credentials:   
+To login into the Sitefinity CMS backend, use the following credentials:   
 **Username:** admin   
 **Password:** password
